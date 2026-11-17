@@ -1,16 +1,80 @@
-# React + Vite
+# Dungeon Master's Toolkit
+Aplicación web diseñada para ayudar a los Dungeon Masters de Dungeons & Dragons 5e durante sus partidas. Permite consultar monstruos, generar recompensas y realizar lanzamientos de dados desde una sola interfaz.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Características principales
+### Bestiario
+- Consulta de monstruos mediante la API de D&D 5e.
+- Búsqueda por nombre y filtros por nivel de desafío (CR).
+- Tarjetas con información general de cada criatura.
+- Vista detallada con estadísticas, habilidades y acciones.
 
-Currently, two official plugins are available:
+### Generador de Loot
+- Generación aleatoria de monedas de cobre, plata, oro y platino.
+- Selección de equipamiento consultado desde la API.
+- Posibilidad de obtener objetos mágicos.
+- Recompensas ajustadas al nivel de desafío seleccionado.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+### Lanzamiento de dados
+- Dados d4, d6, d8, d10, d12, d20 y d100.
+- Lanzamiento de múltiples dados.
+- Modificadores positivos y negativos.
+- Visualización de resultados individuales y totales.
+- Historial de los últimos lanzamientos.
 
-## React Compiler
+## Tecnologías utilizadas
+- React
+- JavaScript
+- Vite
+- CSS
+- D&D 5e API
+- Git y GitHub
+- Vercel
+- Capacitor (integración Android prevista)
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## API utilizada
+La aplicación consume información de la API pública de D&D 5e:
+https://www.dnd5eapi.co/
 
-## Expanding the ESLint configuration
+## Instalación y ejecución local
+1. Clonar el repositorio:
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+   ```bash
+   git clone https://github.com/Hiraeth248/Web-DmToolKit.git
+   ```
+
+2. Entrar en la carpeta del proyecto:
+
+   ```bash
+   cd dm-toolkit
+   ```
+
+3. Instalar las dependencias:
+
+   ```bash
+   npm install
+   ```
+
+4. Iniciar el servidor de desarrollo:
+
+   ```bash
+   npm run dev
+   ```
+
+5. Abrir en el navegador la dirección local que proporciona Vite.
+
+## Compilación de producción
+Para generar la versión de producción:
+
+```bash
+npm run build
+```
+Los archivos compilados se guardan en la carpeta `dist`.
+
+## Despliegue
+Aplicación publicada en Vercel:
+**[Enlace]**
+
+## Autor
+Geraldine Ladino
+
+Proyecto académico desarrollado como trabajo final de Diseño Web.
