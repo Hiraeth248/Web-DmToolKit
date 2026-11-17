@@ -1,0 +1,1252 @@
+
+/* =====================================
+   CONFIGURACIÓN GENERAL
+===================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap');
+
+:root {
+  font-family: 'Roboto', sans-serif;
+  color: #e8dfc8;
+  background: #11100e;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+
+  --background: #11100e;
+  --surface: #1c1915;
+  --surface-light: #29231b;
+  --gold: #c6a15b;
+  --gold-light: #e3c47c;
+  --text: #e8dfc8;
+  --text-muted: #a69b85;
+  --border: #51432e;
+  --danger: #a8463d;
+}
+
+/* =====================================
+   REINICIO DE ESTILOS
+===================================== */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  min-width: 320px;
+  scroll-behavior: smooth;
+}
+
+body {
+  min-width: 320px;
+  min-height: 100vh;
+  background:
+    radial-gradient(
+      ellipse at top,
+      #292116 0%,
+      #17130f 45%,
+      #100e0c 100%
+    );
+}
+
+button,
+input,
+select {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+/* =====================================
+   CONTENEDOR PRINCIPAL
+===================================== */
+
+.app-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.main-content {
+  width: 100%;
+  max-width: 1250px;
+  margin: 0 auto;
+  padding: 35px 30px;
+  flex: 1;
+}
+
+/* =====================================
+   NAVEGACIÓN
+===================================== */
+
+.navbar {
+  width: 100%;
+  min-height: 90px;
+  padding: 15px 5%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 25px;
+
+  background: rgba(22, 19, 15, 0.96);
+  border-bottom: 1px solid var(--border);
+}
+
+.navbar-brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.brand-icon {
+  font-size: 38px;
+}
+
+.navbar-brand h1 {
+  font-family: 'Cinzel', serif;
+  color: var(--gold-light);
+  font-size: 22px;
+  letter-spacing: 1px;
+}
+
+.navbar-brand span:last-child {
+  display: block;
+  color: var(--text-muted);
+  font-size: 11px;
+  margin-top: 3px;
+}
+
+.navbar-menu {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.nav-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+
+  padding: 12px 17px;
+  border: 1px solid transparent;
+  border-radius: 6px;
+
+  color: var(--text-muted);
+  background: transparent;
+
+  font-size: 13px;
+  font-weight: 500;
+
+  transition: 0.25s;
+}
+
+.nav-button:hover {
+  color: var(--gold-light);
+  background: var(--surface-light);
+}
+
+.nav-button.active {
+  color: var(--gold-light);
+  background: #33291b;
+  border-color: var(--gold);
+}
+
+.nav-icon {
+  font-size: 17px;
+}
+
+/* =====================================
+   PIE DE PÁGINA
+===================================== */
+
+.app-footer {
+  padding: 25px;
+  text-align: center;
+  background: #17130f;
+  border-top: 1px solid var(--border);
+}
+
+.app-footer p {
+  font-family: 'Cinzel', serif;
+  color: var(--gold);
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+
+.app-footer span {
+  color: var(--text-muted);
+  font-size: 11px;
+}
+
+/* =====================================
+   RESPONSIVE - TABLET
+===================================== */
+
+@media (max-width: 850px) {
+  .navbar {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 15px;
+  }
+
+  .navbar-brand {
+    justify-content: center;
+  }
+
+  .navbar-menu {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+}
+
+/* =====================================
+   RESPONSIVE - MÓVILES
+===================================== */
+
+@media (max-width: 550px) {
+  .navbar {
+    padding: 15px 10px;
+  }
+
+  .navbar-brand h1 {
+    font-size: 19px;
+  }
+
+  .navbar-menu {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 5px;
+  }
+
+  .nav-button {
+    flex-direction: column;
+    gap: 5px;
+    padding: 10px 4px;
+    font-size: 10px;
+    text-align: center;
+  }
+
+  .nav-icon {
+    font-size: 20px;
+  }
+
+  .main-content {
+    padding: 25px 15px;
+  }
+
+  .app-footer {
+    padding: 20px 10px;
+  }
+}
+
+
+/* =====================================
+   BESTIARIO
+===================================== */
+
+.page-heading {
+  margin-bottom: 30px;
+}
+
+.section-label {
+  color: var(--gold);
+  font-size: 11px;
+  letter-spacing: 3px;
+  font-weight: 700;
+}
+
+.page-heading h2 {
+  font-family: 'Cinzel', serif;
+  color: var(--gold-light);
+  font-size: 36px;
+  margin: 10px 0;
+}
+
+.page-heading p {
+  color: var(--text-muted);
+  line-height: 1.7;
+  max-width: 650px;
+  font-size: 14px;
+}
+
+/* Controles de búsqueda */
+
+.bestiary-controls {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 20px;
+
+  padding: 22px;
+  margin-bottom: 30px;
+
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+}
+
+.search-container,
+.filter-container {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+}
+
+.search-container label,
+.filter-container label {
+  color: var(--gold-light);
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.search-container input,
+.filter-container select {
+  width: 100%;
+  padding: 13px;
+
+  color: var(--text);
+  background: #12100d;
+
+  border: 1px solid var(--border);
+  border-radius: 5px;
+
+  outline: none;
+  font-size: 13px;
+}
+
+.search-container input:focus,
+.filter-container select:focus {
+  border-color: var(--gold);
+}
+
+.search-container input::placeholder {
+  color: #756b5b;
+}
+
+/* Resultados */
+
+.bestiary-results {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.bestiary-results h3 {
+  color: var(--gold-light);
+  font-family: 'Cinzel', serif;
+  font-size: 19px;
+}
+
+.bestiary-results p {
+  color: var(--text-muted);
+  font-size: 12px;
+  margin-top: 5px;
+}
+
+/* Cuadrícula de monstruos */
+
+.monster-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+}
+
+/* Tarjetas */
+
+.monster-card {
+  background: linear-gradient(145deg, #282119, #1a1713);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  overflow: hidden;
+  transition: 0.25s;
+}
+
+.monster-card:hover {
+  border-color: var(--gold);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+.monster-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+
+  padding: 12px 15px;
+
+  background: #302619;
+  border-bottom: 1px solid var(--border);
+}
+
+.monster-type {
+  color: #c5b69b;
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.monster-cr {
+  color: var(--gold-light);
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.monster-card-body {
+  padding: 18px;
+}
+
+.monster-card-body h3 {
+  font-family: 'Cinzel', serif;
+  color: var(--gold-light);
+  font-size: 19px;
+  margin-bottom: 18px;
+  min-height: 48px;
+}
+
+.monster-stats {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.monster-stat {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 10px;
+  background: #171410;
+  border-radius: 5px;
+  border: 1px solid #383024;
+}
+
+.monster-stat span {
+  color: var(--text-muted);
+  font-size: 10px;
+}
+
+.monster-stat strong {
+  color: var(--text);
+  font-size: 14px;
+}
+
+.monster-details-button {
+  width: 100%;
+  padding: 12px;
+  margin-top: 18px;
+
+  color: var(--gold-light);
+  background: transparent;
+
+  border: 1px solid var(--gold);
+  border-radius: 5px;
+
+  font-size: 12px;
+  font-weight: 600;
+
+  transition: 0.2s;
+}
+
+.monster-details-button:hover {
+  background: var(--gold);
+  color: #17130f;
+}
+
+/* Estados de carga y errores */
+
+.loading-message,
+.empty-message,
+.error-message {
+  padding: 35px 20px;
+  margin: 20px 0;
+
+  text-align: center;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+
+  color: var(--text-muted);
+}
+
+.empty-message h3 {
+  color: var(--gold-light);
+  font-family: 'Cinzel', serif;
+  margin-bottom: 10px;
+}
+
+.error-message {
+  color: #ef9991;
+  border-color: var(--danger);
+}
+
+.load-more-button {
+  display: block;
+  margin: 30px auto;
+  padding: 13px 25px;
+
+  background: #302619;
+  color: var(--gold-light);
+
+  border: 1px solid var(--gold);
+  border-radius: 5px;
+
+  font-weight: 600;
+  transition: 0.2s;
+}
+
+.load-more-button:hover {
+  background: var(--gold);
+  color: #17130f;
+}
+
+/* =====================================
+   FICHA DETALLADA
+===================================== */
+
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 20px;
+
+  background: rgba(0, 0, 0, 0.82);
+  backdrop-filter: blur(4px);
+}
+
+.monster-modal {
+  width: 100%;
+  max-width: 750px;
+  max-height: 90vh;
+  overflow-y: auto;
+
+  padding: 25px;
+
+  background: #201b15;
+  border: 1px solid var(--gold);
+  border-radius: 9px;
+
+  box-shadow: 0 15px 50px rgba(0, 0, 0, 0.6);
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 15px;
+
+  padding-bottom: 20px;
+  border-bottom: 1px solid var(--border);
+}
+
+.modal-subtitle {
+  color: var(--gold);
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.modal-header h2 {
+  color: var(--gold-light);
+  font-family: 'Cinzel', serif;
+  font-size: 27px;
+  margin-top: 8px;
+}
+
+.modal-close {
+  width: 35px;
+  height: 35px;
+
+  background: #302619;
+  border: 1px solid var(--border);
+  border-radius: 5px;
+
+  color: var(--gold-light);
+  font-weight: 700;
+}
+
+.modal-close:hover {
+  background: var(--danger);
+  color: white;
+}
+
+.modal-main-stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  margin: 22px 0;
+}
+
+.modal-main-stats div {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+
+  padding: 13px 8px;
+
+  text-align: center;
+  background: #302619;
+  border: 1px solid var(--border);
+  border-radius: 5px;
+}
+
+.modal-main-stats span {
+  color: var(--text-muted);
+  font-size: 10px;
+}
+
+.modal-main-stats strong {
+  color: var(--gold-light);
+  font-size: 15px;
+}
+
+.modal-section {
+  margin-top: 25px;
+  padding-top: 20px;
+  border-top: 1px solid var(--border);
+}
+
+.modal-section h3 {
+  color: var(--gold-light);
+  font-family: 'Cinzel', serif;
+  font-size: 17px;
+  margin-bottom: 15px;
+}
+
+.modal-section > p {
+  color: var(--text-muted);
+  font-size: 13px;
+  line-height: 1.8;
+  margin-bottom: 8px;
+  overflow-wrap: anywhere;
+}
+
+.modal-section > p strong {
+  color: var(--text);
+}
+
+.ability-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 8px;
+}
+
+.ability-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+
+  padding: 12px 5px;
+
+  background: #302619;
+  border: 1px solid var(--border);
+  border-radius: 5px;
+}
+
+.ability-item span {
+  color: var(--text-muted);
+  font-size: 10px;
+  text-align: center;
+}
+
+.ability-item strong {
+  color: var(--gold-light);
+  font-size: 18px;
+}
+
+.monster-ability {
+  margin-bottom: 15px;
+  padding: 13px;
+
+  background: #171410;
+  border-left: 3px solid var(--gold);
+  border-radius: 3px;
+}
+
+.monster-ability strong {
+  color: var(--gold-light);
+  font-size: 13px;
+}
+
+.monster-ability p {
+  color: var(--text-muted);
+  font-size: 12px;
+  line-height: 1.7;
+  margin-top: 7px;
+  white-space: pre-line;
+  overflow-wrap: anywhere;
+}
+
+/* =====================================
+   RESPONSIVE - TABLET
+===================================== */
+
+@media (max-width: 900px) {
+  .monster-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+/* =====================================
+   RESPONSIVE - MÓVILES
+===================================== */
+
+@media (max-width: 600px) {
+  .page-heading h2 {
+    font-size: 29px;
+  }
+
+  .bestiary-controls {
+    grid-template-columns: 1fr;
+    padding: 15px;
+  }
+
+  .monster-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .monster-card-body h3 {
+    min-height: auto;
+  }
+
+  .modal-overlay {
+    padding: 8px;
+  }
+
+  .monster-modal {
+    padding: 17px;
+    max-height: 95vh;
+  }
+
+  .modal-header h2 {
+    font-size: 21px;
+  }
+
+  .modal-main-stats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .ability-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+
+/* ========================================
+   GENERADOR DE LOOT
+======================================== */
+
+.loot-page {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 30px 20px 60px;
+}
+
+.loot-header {
+  margin-bottom: 35px;
+}
+
+.section-eyebrow {
+  display: block;
+  color: var(--gold);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+}
+
+.loot-header h1 {
+  color: var(--gold-light);
+  font-size: 2.5rem;
+  margin: 0 0 12px;
+}
+
+.loot-header p {
+  color: var(--text-muted);
+  max-width: 650px;
+  line-height: 1.7;
+}
+
+.loot-generator-panel {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 28px;
+  margin-bottom: 30px;
+}
+
+.loot-control {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 300px;
+  margin-bottom: 22px;
+}
+
+.loot-control label {
+  color: var(--text);
+  font-weight: 600;
+}
+
+.loot-control select {
+  width: 100%;
+  padding: 12px;
+  background: var(--background);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  color: var(--text);
+  font-size: 1rem;
+}
+
+.loot-generate-button {
+  background: var(--gold);
+  color: #17130c;
+  border: none;
+  border-radius: 6px;
+  padding: 13px 25px;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.2s;
+}
+
+.loot-generate-button:hover:not(:disabled) {
+  background: var(--gold-light);
+  transform: translateY(-2px);
+}
+
+.loot-generate-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.loot-hint {
+  color: var(--text-muted);
+  font-size: 0.85rem;
+  margin: 15px 0 0;
+}
+
+.loot-error {
+  background: rgba(180, 45, 45, 0.12);
+  border: 1px solid var(--danger);
+  color: #ff9999;
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 25px;
+}
+
+.loot-results {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 28px;
+}
+
+.loot-results-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid var(--border);
+}
+
+.loot-results-header h2 {
+  color: var(--gold-light);
+  margin: 0;
+}
+
+.loot-cr-badge {
+  background: var(--background);
+  border: 1px solid var(--gold);
+  color: var(--gold-light);
+  padding: 8px 14px;
+  border-radius: 20px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.loot-section {
+  margin-top: 28px;
+}
+
+.loot-section h3 {
+  color: var(--gold-light);
+  margin: 0 0 16px;
+  font-size: 1.2rem;
+}
+
+.loot-coins-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.loot-coin {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 18px;
+  background: var(--background);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+}
+
+.loot-coin span {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+}
+
+.loot-coin strong {
+  color: var(--gold-light);
+  font-size: 1.15rem;
+}
+
+.loot-items-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 15px;
+}
+
+.loot-item-card {
+  background: var(--background);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 20px;
+}
+
+.loot-item-category {
+  display: inline-block;
+  color: var(--gold);
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+}
+
+.loot-item-card h4 {
+  color: var(--text);
+  font-size: 1.1rem;
+  margin: 0 0 12px;
+}
+
+.loot-item-card p {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  line-height: 1.6;
+  margin: 8px 0 0;
+}
+
+.magic-item-card {
+  border-color: var(--gold);
+}
+
+@media (max-width: 700px) {
+  .loot-page {
+    padding: 20px 14px 40px;
+  }
+
+  .loot-header h1 {
+    font-size: 2rem;
+  }
+
+  .loot-generator-panel,
+  .loot-results {
+    padding: 20px;
+  }
+
+  .loot-coins-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .loot-items-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .loot-results-header {
+    align-items: flex-start;
+  }
+}
+
+/* ========================================
+   TIPOGRAFÍA DEL GENERADOR DE LOOT
+======================================== */
+
+.loot-page h1,
+.loot-page h2,
+.loot-page h3,
+.loot-page h4,
+.loot-page .section-eyebrow,
+.loot-page .loot-cr-badge {
+  font-family: 'Cinzel', serif;
+}
+
+
+/* ========================================
+   LANZAMIENTO DE DADOS
+======================================== */
+
+.dice-page {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 30px 20px 60px;
+}
+
+.dice-header {
+  margin-bottom: 35px;
+}
+
+.dice-header h1,
+.dice-history-header h2,
+.dice-result-info h3 {
+  font-family: 'Cinzel', serif;
+}
+
+.dice-header h1 {
+  color: var(--gold-light);
+  font-size: 2.5rem;
+  margin: 0 0 12px;
+}
+
+.dice-header p {
+  color: var(--text-muted);
+  max-width: 650px;
+  line-height: 1.7;
+}
+
+.dice-generator-panel {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  margin-bottom: 30px;
+}
+
+.dice-control {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.dice-control label {
+  color: var(--text);
+  font-weight: 600;
+}
+
+.dice-control input {
+  width: 100%;
+  max-width: 250px;
+  padding: 12px;
+  background: var(--background);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  color: var(--text);
+  font-size: 1rem;
+}
+
+.dice-types {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.dice-type-button {
+  min-width: 65px;
+  padding: 13px 18px;
+  background: var(--background);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  color: var(--text);
+  font-weight: 700;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.dice-type-button:hover,
+.dice-type-button.selected {
+  background: var(--gold);
+  color: #17130c;
+  border-color: var(--gold);
+}
+
+.dice-roll-button {
+  background: var(--gold);
+  color: #17130c;
+  border: none;
+  border-radius: 6px;
+  padding: 14px 25px;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.2s;
+  align-self: flex-start;
+}
+
+.dice-roll-button:hover {
+  background: var(--gold-light);
+  transform: translateY(-2px);
+}
+
+.dice-history {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 28px;
+}
+
+.dice-history-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.dice-history-header h2 {
+  color: var(--gold-light);
+  margin: 0;
+}
+
+.dice-clear-button {
+  background: transparent;
+  border: 1px solid var(--border);
+  color: var(--text-muted);
+  border-radius: 6px;
+  padding: 9px 14px;
+  cursor: pointer;
+}
+
+.dice-clear-button:hover:not(:disabled) {
+  color: var(--text);
+  border-color: var(--gold);
+}
+
+.dice-clear-button:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.dice-empty {
+  color: var(--text-muted);
+  text-align: center;
+  padding: 30px 10px;
+}
+
+.dice-history-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.dice-result-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  background: var(--background);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 18px;
+}
+
+.dice-result-info {
+  min-width: 120px;
+}
+
+.dice-result-info h3 {
+  color: var(--gold-light);
+  margin: 0 0 6px;
+}
+
+.dice-result-info span {
+  color: var(--text-muted);
+  font-size: 0.8rem;
+}
+
+.dice-individual-results {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.dice-individual-results span {
+  display: grid;
+  place-items: center;
+  min-width: 35px;
+  height: 35px;
+  padding: 0 6px;
+  background: var(--surface-light);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  color: var(--text);
+  font-weight: 700;
+}
+
+.dice-individual-results .dice-modifier {
+  color: var(--gold-light);
+  border-color: var(--gold);
+}
+
+.dice-total {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  min-width: 65px;
+}
+
+.dice-total span {
+  color: var(--text-muted);
+  font-size: 0.8rem;
+}
+
+.dice-total strong {
+  color: var(--gold-light);
+  font-size: 1.5rem;
+}
+
+@media (max-width: 700px) {
+  .dice-page {
+    padding: 20px 14px 40px;
+  }
+
+  .dice-header h1 {
+    font-size: 2rem;
+  }
+
+  .dice-generator-panel,
+  .dice-history {
+    padding: 20px;
+  }
+
+  .dice-history-header {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .dice-result-card {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .dice-total {
+    align-items: flex-start;
+  }
+}
