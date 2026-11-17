@@ -74,6 +74,19 @@ Los archivos compilados se guardan en la carpeta `dist`.
 Aplicación publicada en Vercel:
 **[https://web-dm-toolkit.vercel.app/]**
 
+## Descarga para Android
+La aplicación también está disponible para dispositivos Android.
+
+**Versión actual:** 1.0.0
+
+[Descargar Dungeon Master's Toolkit v1.0.0](https://github.com/Hiraeth248/Web-DmToolKit/releases/tag/v1.0.0)
+
+Para instalar la aplicación:
+1. Accede al enlace de GitHub Releases.
+2. Descarga el archivo `app-release.apk`.
+3. Abre el archivo desde tu dispositivo Android.
+4. Autoriza la instalación desde esa fuente si Android lo solicita.
+
 ## Autor
 Geraldine Ladino
 
